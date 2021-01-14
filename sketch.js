@@ -3,12 +3,22 @@ function setup() {
 }
 
 function draw() {
-	background(225);
-	textSize(32);
-	fill(180);
-	text(hour(), 10, 30);
-	fill(100);
-	text(minute(), 10, 60);
-	fill(0);
-	text(second(), 10, 90);
+	background(220);
+	stroke(225);
+	strokeWeight(5);
+	
+	push()
+	fill(0,0,225,100);
+	ellipse(400,300,second()*8,second()*8);
+	pop()
+	
+	push()
+	fill(225,0,0,100);
+	ellipse(400,300,minute()*8,minute()*8);
+	pop()
+	
+	push()
+	fill(0,225,0,100);
+	ellipse(400,300,hour()*8,hour()*8);
+	pop()
 }
